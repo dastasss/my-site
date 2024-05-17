@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+    <div class="container text-center mt-5">
+        <div class="card mt-5" style="background-color: #1a1a1a; border: 1px solid #4d4d4d; border-radius: 10px; box-shadow: 0px 0px 20px rgba(106, 21, 162, 0.5);">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #ff9900; font-family: 'Orbitron', sans-serif;">{{ blog.title }}</h5>
+                <hr style="border-top: 1px solid #4d4d4d;">
+                <div class="scroll-container" style="max-height: 350px; overflow-y: auto;">
+                    <p class="card-text m-3" style="color: #b3b3b3; font-family: 'Roboto', sans-serif; text-align: justify;">{{ blog.content }}</p>
+                </div>
+                <hr style="border-top: 1px solid #4d4d4d;">
+                <p class="card-text" style="color: #ff7f50; font-size: 12px;">Publicado el: {{ blog.date_posted }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

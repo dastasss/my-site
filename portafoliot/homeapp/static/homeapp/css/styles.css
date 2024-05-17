@@ -1,0 +1,30 @@
+/* miapp/static/miapp/css/estilos.css */
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: monospace;
+    background-color: black;
+    color: lime; /* Color verde fosforescente */
+    
+}
+
+#loading {
+    position: absolute;
+    bottom: 20%; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    opacity: 0.4;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: lime;
+    padding: 10px;
+    text-align: center;
+}

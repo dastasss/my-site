@@ -1,0 +1,13 @@
+body {
+    background-image: url('https://t3.ftcdn.net/jpg/03/24/74/54/360_F_324745441_29s2iZ2NoUgq12WDBQcJ4CRjPn82Kc0D.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+    color: green;
+}

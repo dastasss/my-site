@@ -1,0 +1,29 @@
+<!-- miapp/templates/escena.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.D PORT</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/styles.css' %}">
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{% static 'homeapp/js/escena.js' %}"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>DASTA DEAD DEV 2024</p>
+    </footer>
+
+    <script>
+        // Temporizador de redirección
+        setTimeout(function() {
+            window.location.href =  '{% url "home" %}'; // Cambia "nombre_de_la_vista" por el nombre de la vista de la otra aplicación de Django
+        }, 5000); // 5000 milisegundos = 5 segundos
+    </script>
+</body>
+</html>
