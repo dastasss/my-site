@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h2 class="card-title">Lista de Gastos</h2>
+                    <ul class="list-group">
+                        {% for expense in expenses %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">{{ expense.description }} - {{ expense.amount }} - {{ expense.date }}
+                                <div>
+                                    <a href="{% url 'expense_update' expense.pk %}" class="btn btn-sm btn-outline-success">Editar</a>
+                                    <a href="{% url 'expense_delete' expense.pk %}" class="btn btn-sm btn-outline-warning">Eliminar</a>
+                                </div>
+                            </li>
+                        {% empty %}
+                            <li class="list-group-item">No hay gastos</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'expense_create' %}" class="btn btn-warning mt-3">Agregar Gasto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
