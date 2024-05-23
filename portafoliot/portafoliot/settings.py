@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'homeapp',
     'blg',
     'contact',
+    'authapp',
+    'expensesapp',
+    'errorapp',
     
     
 ]
@@ -73,6 +76,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'portafoliot.wsgi.application'
+
+LOGIN_REDIRECT_URL = '/profile/'
 
 
 # Database

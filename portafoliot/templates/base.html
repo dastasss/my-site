@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/whatsapp.css' %}">
   </head>
   <body>
 
@@ -16,6 +17,15 @@
     
     {% block content %}
     {% endblock %}
+
+    {% include "whatsapp.html" %}
+
+    <hr>
+
+    <footer>
+      {% include "footer.html" %}
+    </footer>
+    
 
    
     
