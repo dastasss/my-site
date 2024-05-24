@@ -3,11 +3,19 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    
+    height: 100vh;
 }
 
+@media (max-width: 768px) { /* Ajusta la imagen para pantallas más pequeñas */
+    body {
+        background-size: cover; /* La imagen cubrirá todo el área del contenedor */
+    }
+}
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     color: green;
+}
+
+p{
+    color: beige;
 }

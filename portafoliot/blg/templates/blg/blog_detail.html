@@ -13,6 +13,8 @@
                 </div>
                 <hr style="border-top: 1px solid #4d4d4d;">
                 <p class="card-text" style="color: #ff7f50; font-size: 12px;">Publicado el: {{ blog.date_posted }}</p>
+                <hr style="border-top: 1px solid #4d4d4d;">
+                <a href="{{ blog.url|slice:":100" }}" class="mb-1" style="color: #b3b3b3;">{{ blog.url|slice:":100" }}</a>
             </div>
         </div>
     </div>

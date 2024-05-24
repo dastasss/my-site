@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'homeapp',
     'blg',
     'contact',
+    'authapp',
+    'expensesapp',
+    'errorapp',
     
     
 ]
@@ -74,6 +77,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portafoliot.wsgi.application'
 
+LOGIN_REDIRECT_URL = '/profile/'
+
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -99,6 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 4,
+         },
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',

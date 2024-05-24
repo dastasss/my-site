@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Perfil{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8"> <!-- Aumenta el ancho del formulario -->
+            <div class="card bg-dark text-white"> <!-- Cambia el fondo a oscuro -->
+                <div class="card-body">
+                    <h2 class="card-title display-4 text-center mb-4">Perfil</h2> <!-- Aumenta el tamaño del título -->
+                    {% for message in messages %}
+                        {% if message.tags == 'success' %}
+                            <div class="alert alert-success" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-4"> <!-- Aumenta el margen inferior -->
+                            <label for="profile_picture" class="form-label">Subir foto de perfil:</label>
+                            <input type="file" class="form-control form-control-lg" name="profile_picture"> <!-- Aumenta el tamaño del campo de entrada -->
+                        </div>
+                        <div class="d-flex justify-content-between"> <!-- Añade un margen derecho al div que contiene los botones -->
+                            <div>
+                                <button type="submit" class="btn btn-outline-primary btn-lg">Subir</button> <!-- Aumenta el tamaño del botón -->
+                            </div>
+                            <div>
+                                <a href="{% url 'profileinfo' %}" class="btn btn-outline-info btn-lg">Información del perfil</a> <!-- Aumenta el tamaño del botón -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
